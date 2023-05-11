@@ -32,4 +32,4 @@ jobs:
         deploymentMode: Incremental
         # Supply deployment parameter values. In this simple scenario, 
         # I am only passing the name of the target ADF to which this is being deployed
-        parameters: factoryName=adfv2-cicd-target
+#        parameters: factoryName=adfv2-cicd-target
