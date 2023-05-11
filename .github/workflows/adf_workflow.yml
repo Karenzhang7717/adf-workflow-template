@@ -24,10 +24,10 @@ jobs:
         # Provide the scope of the deployment. Valid values are: 'resourcegroup', 'managementgroup', 'subscription'
         scope: 'resourcegroup'
         # Target resource group of the deployment.
-        resourceGroupName: 'xxx'
+        resourceGroupName: 'testrg'
         # Specify the path to the ADF ARM template. In this scenario, the workflow is in the same branch, 
         # hence we only add the folder and arm template name to the path
-        template: ./testrepo/ARMTemplateForFactory.json
+        template: ./adf-workflow-template/ARMTemplateForFactory.json
         # Incremental (only add resources to resource group) or Complete (remove extra resources from resource group) or Validate (only validates the template).
         deploymentMode: Incremental
         # Supply deployment parameter values. In this simple scenario, 
