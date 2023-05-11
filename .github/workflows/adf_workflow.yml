@@ -30,6 +30,4 @@ jobs:
         template: ././ARMTemplateForFactory.json
         # Incremental (only add resources to resource group) or Complete (remove extra resources from resource group) or Validate (only validates the template).
         deploymentMode: Incremental
-        # Supply deployment parameter values. In this simple scenario, 
-        # I am only passing the name of the target ADF to which this is being deployed
-#        parameters: factoryName=adfv2-cicd-target
+
