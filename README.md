@@ -12,7 +12,7 @@ In GitHub Actions, a workflow is described in a YAML file and is made up of step
 
 ## Try this template
 Create a new repo using this template:
-![image](https://github.com/Karenzhang7717/adf-workflow-template/assets/64809520/9b50c415-4056-4fe1-8fd2-89739702082c)
+![image](https://github.com/Karenzhang7717/adf-workflow-template/assets/64809520/dce9abff-56f0-44e4-8ba8-d9efab47cd0e)
 Clone the repo:
 ```bash
 [pip install foobar](https://github.com/Karenzhang7717/adf-workflow-template.git)
