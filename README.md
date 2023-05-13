@@ -21,7 +21,7 @@ Clone the repo:
 Prerequisites:
 - Azure Subscription
 - Azure Data Factory instance
--GitHub repository integration set up. (follow the steps here to set it up if you do not have it set up already)
+-GitHub repository integration set up. (follow the steps [here](https://learn.microsoft.com/en-us/azure/data-factory/source-control#author-with-github-integration) to set it up if you do not have it set up already)
 
 ## Generate deployment credentials
 You must generate credentials to authenticate and authorize GitHub Actions to deploy your ARM template to the specified Data Factory. Using the Azure CLI command 
@@ -35,13 +35,13 @@ you can create a service principal. Execute this command in the Azure portal or 
 ## Configure the GitHub secrets
 
 - Go to your repository on GitHub. 
-![image](https://github.com/Karenzhang7717/adf-workflow-template/assets/64809520/10008c86-b59e-4b1b-bbcb-50dbf2bd6242)
-
+![image](https://github.com/Karenzhang7717/adf-workflow-template/assets/64809520/dc3d3573-e03d-4789-b84a-f1ae1ba792a3)
 - Choose Configuration > Secrets > New secret. 
 - Copy the entire JSON output from the Azure CLI command and paste it into the value field of the secret. Name the confidential information 'AZURE_CREDENTIALS'. 
 - Create a new secret 'AZURE_RG'. Add the name of your resource group to the value field of the secret. 
 - Create a new secret titled 'AZURE_SUBSCRIPTION'. Add your subscription ID to the value field of the secret.
-![image](https://github.com/Karenzhang7717/adf-workflow-template/assets/64809520/d1407ef3-fbb6-423f-897e-e0ac3e91fbcc)
+![image](https://github.com/Karenzhang7717/adf-workflow-template/assets/64809520/83364e3e-148e-4004-a999-e2c4e1629a30)
+
 
 ## Step by step guidance to create GitHub Workflow yml file
 please see here: https://medium.com/@karenzhang7717/automate-data-engineering-deployment-with-github-actions-36b6bf499533
@@ -49,10 +49,11 @@ please see here: https://medium.com/@karenzhang7717/automate-data-engineering-de
 ## Testing the workflow
 Since in the workflow file, we specified any changes in the adf_publish branch will trigger the workflow, to test that everything is set up properly, make some changes in your Dev ADF instance and Publish these. This should trigger the workflow to execute.
 To check it, browse to the repository -> Actions -> and identify your workflow.
-![image](https://github.com/Karenzhang7717/adf-workflow-template/assets/64809520/e8407505-6d5a-4d77-b10e-719f99341e1a)
+![image](https://github.com/Karenzhang7717/adf-workflow-template/assets/64809520/6cc8e906-c5e7-473a-b2a8-028c6af0e62b)
+
 
 You can further drill down into each execution and see more details such as all the steps and their duration.
-![image](https://github.com/Karenzhang7717/adf-workflow-template/assets/64809520/e192b679-9c1b-4cda-bc8f-6be4d6c3c3a9)
+![image](https://github.com/Karenzhang7717/adf-workflow-template/assets/64809520/edc49dd2-3b70-496b-b70a-13f103878c64)
 
 
 
